@@ -9,7 +9,7 @@
       include_vars: vars/output_vars
 
     - name: Import vprofile setup Variable #include variable files
-      include_vars: vars/Vprofile-Stack
+      include_vars: vars/Vprofie-Stack
 
     - name: Create vprofile ec2 key # key pair, store the output
       ec2_key:
