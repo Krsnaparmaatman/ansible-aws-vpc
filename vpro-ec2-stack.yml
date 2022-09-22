@@ -195,7 +195,7 @@
 
     - name: Insert/Update Hosts IP & Name in file provision-stack/group_vars/hostsip
       blockinfile:
-        path: provision-stack/group_vars/hostsip
+        path: provision-stack/group_vars
         block: |
           web01_ip: {{ web01_out.tagged_instances[0].private_ip }}
           app01_ip: {{ app01_out.tagged_instances[0].private_ip }}
@@ -239,4 +239,4 @@
           [stack_inst:vars]
           ansible_user=ubuntu
           ansible_ssh_private_key_file=loginkey_vpro.pem
-          #ansible_python_interpreter=/usr/bin/python3
+          ansible_python_interpreter=/usr/bin/python3
